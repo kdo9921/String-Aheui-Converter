@@ -128,7 +128,7 @@ function aheuiro() {
         console.log(temp)
         aheuiCode += "맣";
     }
-    aheuiCode += 
+    aheuiCode += aheuiNumber.final[Math.floor(Math.random() * 7)];
     document.getElementById('aheui').value = aheuiCode;
 
 }
