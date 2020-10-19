@@ -10,7 +10,7 @@ aheuiNumber = {
     n8: ['밣'],
     n9: ['밟', '밟', '밢', '밡'],
     digit: ['사', '삭', '산', '삳', '살'],
-    final: ["희", "하아앙키위커여워", "하아악키위기여워", "호에에에엥", "훼에에엥", "하와와개발자쨩", "호에엥보마조아"]
+    final: ["희", "하앗", "하앙", "하아앙키위커여워", "하아악키위기여워", "호에에에엥", "훼에에엥", "하와와개발자쨩", "호에엥보마조아"]
 };
 
 function reset() {
@@ -56,6 +56,9 @@ function aheuiro() {
     var aheuiCode = "";
     var unicodeNumber = new Array();
     var originString = document.getElementById('string').value;
+    if (originString == "") {
+        return;
+    }
     var originStringLength = originString.length;
     var maxUnicodeNumber = 0;
     for (var i = 0; i < originStringLength; i++) {
@@ -128,7 +131,7 @@ function aheuiro() {
         console.log(temp)
         aheuiCode += "맣";
     }
-    aheuiCode += aheuiNumber.final[Math.floor(Math.random() * 7)];
+    aheuiCode += aheuiNumber.final[Math.floor(Math.random() * 9)];
     document.getElementById('aheui').value = aheuiCode;
 
 }
